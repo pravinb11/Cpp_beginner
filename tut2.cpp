@@ -43,13 +43,8 @@ int main()
     // Arrays
     // int test_scores [5];
     
-    // Array initialization
-    int test_scores [5] {100, 95, 99, 87, 88};
-    std::cout <<"The size of test_scores is "<<sizeof(test_scores)<<std::endl;
-    int high_score_per_level [10] {3,5}; // init to 3, 5 and remaining to 0
-    const double days_in_year {365};
-    // double hi_temperatures [days_in_year] {0}; 
-
-    int another_array [] {1,2,3,4,5};
+    
+    
+     
     return 0;
 }
