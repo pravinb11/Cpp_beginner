@@ -150,5 +150,48 @@ int main(){
         
     }
     
+    std::vector <int> vec {10, 20, 30, 40, 50};
+    vec[0] = 100;
+    vec[4] = 100;
+    // std::cout<<vec<<std::endl;
 
+    // Challenge
+    std::vector <int> vector1 {};
+    std::vector <int> vector2 {};
+    vector1.push_back(10);
+    vector1.push_back(20);
+    std::cout<< vector1.at(0) <<std::endl;
+    std::cout<< vector1.at(1) <<std::endl;
+
+    vector2.push_back(100);
+    vector2.push_back(200);
+    std::cout<< vector2.at(0) <<std::endl;
+    std::cout<< vector2.at(1) <<std::endl;
+    std::vector <std::vector<int>> vector_2d;
+    vector_2d.push_back(vector1);
+    vector_2d.push_back(vector2);
+
+    for (size_t i = 0; i < vector_2d.size(); i++)
+    {
+        for (size_t j = 0; j < vector_2d[0].size(); j++)
+        {
+            std::cout<<"The element of vector_2d is "<<i<<" are "<<j<<" is "<<vector_2d.at(i).at(j)<<std::endl;
+        }
+        
+    }
+
+    vector1.at(0) = 1000;
+
+    for (size_t i = 0; i < vector_2d.size(); i++)
+    {
+        for (size_t j = 0; j < vector_2d[0].size(); j++)
+        {
+            std::cout<<"The element of vector_2d is "<<i<<" are "<<j<<" is "<<vector_2d.at(i).at(j)<<std::endl;
+        }
+    }
+
+    for (size_t j = 0; j < vector1.size(); j++)
+    {
+        std::cout<<"The element of vector1 is "<<j<<" is "<<vector1.at(j)<<std::endl;
+    }
 }
