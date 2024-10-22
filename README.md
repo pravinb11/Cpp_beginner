@@ -10,7 +10,11 @@ Tutorial 3 --> Arrays declaration, initialization, and accessing, multi-dimensio
 
 Tutorial 4 --> Expressions, Statements and Operators
 
-Tutorial 5 --> Pointers and References
+Tutorial 5 --> Pointers and References,
+part1 --> Pointers basic
+part2 --> pointer arithmetic
+part3 --> Passing pointers to a function
+Tutorial 6 -->  
 
 Try catch for exeception handling
 
@@ -19,4 +23,11 @@ What is node? \
 unique ptr \
 shared ptr \
 what is this  \
-What is try catch
+What is try catch \
+what is geometry_msgs::msg::Pose2D \
+Using user defined namespace \
+clock in c++ \
+std::copy \
+std::back_inserter
+
+
