@@ -2,22 +2,22 @@ This is a tutorial from the Udemy course "Beginning C++ Programming - From Begin
 
 https://www.udemy.com/course/beginning-c-plus-plus-programming/
 
-Tutorial 1 --> Gives primitives types in C++ 
+**Tutorial 1** --> Gives primitives types in C++ 
 
-Tutorial 2 --> size of operator, constants 
+**Tutorial 2** --> size of operator, constants 
 
-Tutorial 3 --> Arrays declaration, initialization, and accessing, multi-dimensional arrays, vectors, using std::vectors declaration and initialization. Accessing vector elements. 2D vector
+**Tutorial 3** --> Arrays declaration, initialization, and accessing, multi-dimensional arrays, vectors, using std::vectors declaration and initialization. Accessing vector elements. 2D vector
 
-Tutorial 4 --> Expressions, Statements and Operators
+**Tutorial 4** --> Expressions, Statements and Operators
 
-Tutorial 5 --> Pointers and References, \
+**Tutorial 5** --> Pointers and References, \
 part1 --> Pointers basic \
 part2 --> pointer arithmetic \
 part3 --> Passing pointers to a function \
 part4 -->  \
 References -->
 
-Tutorial 6 --> Object oriented programming \
+**Tutorial 6** --> Object oriented programming \
 part1 --> What is Object oriented programming? What are Classes and Objects? Defining a class and Creating Objects. \
 part2 --> Accessing Class Members \
 part3 --> Class Member Access Modifiers \
