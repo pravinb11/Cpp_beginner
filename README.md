@@ -21,6 +21,14 @@ References -->
 part1 --> What is Object oriented programming? What are Classes and Objects? Defining a class and Creating Objects. \
 part2 --> Accessing Class Members \
 part3 --> Class Member Access Modifiers \
+part4 --> Constructor Initialization Lists, Delegating constructors \
+part5 --> Constructor parameters and default values \
+part6 --> Copy constructor
+part7 --> Shallow copy
+part8 --> Copy constructor
+part9 --> Move constructor
+part10 --> this pointer
+
 Implementing Member Methods
 Constructors and Destructors
 The Default Constructors
