@@ -23,11 +23,14 @@ part2 --> Accessing Class Members \
 part3 --> Class Member Access Modifiers \
 part4 --> Constructor Initialization Lists, Delegating constructors \
 part5 --> Constructor parameters and default values \
-part6 --> Copy constructor
-part7 --> Shallow copy
-part8 --> Copy constructor
-part9 --> Move constructor
-part10 --> this pointer
+part6 --> Copy constructor \
+part7 --> Shallow copy \
+part8 --> Copy constructor \
+part9 --> Move constructor \
+part10 --> this pointer \
+
+**Tutorial 7** --> The Standard Template Library \
+part1 --> What is the STL?
 
 Implementing Member Methods
 Constructors and Destructors
