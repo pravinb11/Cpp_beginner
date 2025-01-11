@@ -35,7 +35,51 @@ part2 --> Generic Programming with Macros \
 part3 --> Generic Programming with Function Templates \
 part4 --> Generic Programming with Class Templates \
 part5 --> Creating a Generic Array Template Class \
-part6 --> Introduction to STL Containers
+part7 --> Introduction to STL Containers
+part --> Introduction to STL Containers
+part --> Introduction to STL Containers - Demo
+part --> Introduction to STL Algorithms
+part --> Sequence Container - Array
+part --> Sequence Container - Vector
+part --> Sequence Container - Deque
+part --> Sequence Container - List and Forward List
+part --> Associative containers - Sets
+part --> Associative containers - Maps
+part --> Container Adaptors - Stack
+part --> Container Adaptors - Queue
+part --> Container Adaptors - Priority Queue
+
+**Tutorial 8** --> Smart Pointers
+Some issue with Raw pointers
+What is a Smart Pointer? Ownership and RAII
+Unique Pointers
+Shared Pointers
+Weak Pointers
+Custom Deleters
+
+**Tutorial 9** --> Exception Handling
+Basic Concepts and a simple example: Dividing by zero
+Throwing an Exception from a Function
+Handling Multiple Exceptions
+Stack Unwinding and How it works
+Creating User-Defined Exception Classes
+Class level exceptions
+The C++ std::exception class hierarchy
+
+**Tutorial 10** --> I/O and streams
+
+**Tutorial 11** --> Lambda Expressions
+
+**Tutorial 12** --> Operator overloading
+
+**Tutorial 13** --> Inheritance
+
+**Tutorial 14** --> Polymorphism
+
+
+
+
+
 
 
 Implementing Member Methods
