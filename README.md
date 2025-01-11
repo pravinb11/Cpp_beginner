@@ -27,10 +27,16 @@ part6 --> Copy constructor \
 part7 --> Shallow copy \
 part8 --> Copy constructor \
 part9 --> Move constructor \
-part10 --> this pointer \
+part10 --> this pointer 
 
 **Tutorial 7** --> The Standard Template Library \
-part1 --> What is the STL?
+part1 --> What is the STL? \
+part2 --> Generic Programming with Macros \
+part3 --> Generic Programming with Function Templates \
+part4 --> Generic Programming with Class Templates \
+part5 --> Creating a Generic Array Template Class \
+part6 --> Introduction to STL Containers
+
 
 Implementing Member Methods
 Constructors and Destructors
