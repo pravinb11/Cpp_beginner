@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Generate detailed colliders - CARLA Simulator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="extra.css" rel="stylesheet" />
+  
+  
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Generate detailed colliders";
+    var mkdocs_page_input_path = "tuto_D_generate_colliders.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+<script async type="text/javascript" src="../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="carla" /><meta name="readthedocs-version-slug" content="0.9.12" /><meta name="readthedocs-resolver-filename" content="/tuto_D_generate_colliders/" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="https://carla.readthedocs.io/en/0.9.12/" class="icon icon-home"> CARLA Simulator</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="https://carla.readthedocs.io/en/0.9.12/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/start_introduction/">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/start_quickstart/">Quick start package installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Building CARLA</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="build_linux.html">Linux build</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="build_windows.html">Windows build</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="build_update.html">Update CARLA</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/build_system/">Build system</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/build_docker/">CARLA in Docker</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/build_faq/">F.A.Q.</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">First steps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="core_concepts.html">Core concepts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="core_world.html">1st- World and client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="core_actors.html">2nd- Actors and blueprints</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="core_map.html">3rd- Maps and navigation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="core_sensors.html">4th- Sensors and data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Advanced concepts</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_opendrive/">OpenDRIVE standalone mode</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_ptv/">PTV-Vissim co-simulation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_recorder/">Recorder</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_rendering_options/">Rendering options</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="adv_rss.html">RSS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="adv_synchrony_timestep.html">Synchrony and time-step</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_benchmarking/">Benchmarking Performance</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_agents/">CARLA Agents</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Traffic Simulation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ts_traffic_simulation_overview/">Traffic Simulation Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_traffic_manager/">Traffic Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_sumo/">SUMO co-simulation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_scenic/">Scenic</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">References</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="python_api.html">Python API reference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/bp_library/">Blueprint Library</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ref_cpp/">C++ reference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ref_recorder_binary_file_format/">Recorder binary file format</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ref_sensors.html">Sensors reference</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Plugins</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/plugins_carlaviz/">carlaviz — web visualizer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">ROS bridge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ros_documentation/">ROS bridge documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Custom Maps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_map_overview/">Overview of custom maps in CARLA</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_generate_map/">Create a map in RoadRunner</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_add_map_package/">Import map in CARLA package</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_add_map_source/">Import map in CARLA source build</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_add_map_alternative/">Alternative ways to import maps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_manual_map_package/">Manually prepare map package</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_layers/">Customizing maps: Layered maps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_add_tl/">Customizing maps: Traffic lights and signs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_road_painter/">Customizing maps: Road painter</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_buildings/">Customizing maps: Procedural Buildings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_weather_landscape/">Customizing maps: Weather and landscape</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_generate_pedestrian_navigation/">Generate pedestrian navigation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Large Maps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/large_map_overview/">Large maps overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/large_map_roadrunner/">Create a large map in RoadRunner</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/large_map_import/">Import/Package a large map</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials (general)</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto_G_add_friction_triggers.html">Add friction triggers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto_G_control_vehicle_physics.html">Control vehicle physics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_control_walker_skeletons/">Control walker skeletons</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_openstreetmap/">Generate maps with OpenStreetMap</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_retrieve_data/">Retrieve simulation data</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_carsim_integration/">CarSim Integration (Beta)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_rllib_integration/">RLlib Integration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_chrono/">Chrono Integration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/build_docker_unreal/">Build Unreal and CARLA in Docker</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials (assets)</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_A_add_vehicle/">Add a new vehicle</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto_A_add_props.html">Add new props</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_A_create_standalone/">Create standalone packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_A_material_customization/">Material customization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials (developers)</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_contribute_assets/">How to upgrade content</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_create_sensor/">Create a sensor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_create_semantic_tags/">Create semantic tags</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_customize_vehicle_suspension/">Customize vehicle suspension</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="tuto_D_generate_colliders.html">Generate detailed colliders</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="tuto_D_generate_colliders.html#raycast-colliders">Raycast colliders</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#1-export-the-vehicle-fbx">1-Export the vehicle FBX</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#2-generate-a-low-density-mesh">2-Generate a low density mesh</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#3-import-the-mesh-into-ue">3-Import the mesh into UE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#4-add-the-mesh-as-collider">4-Add the mesh as collider</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="tuto_D_generate_colliders.html#physics-colliders">Physics colliders</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#0-prerequisites">0-Prerequisites</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#1-define-custom-collision-for-wheels-in-unreal-editor">1-Define custom collision for wheels in Unreal Editor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#2-export-the-vehicle-as-fbx">2-Export the vehicle as FBX</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#3-to-4-import-to-blender-and-create-custom-boundary">3 to 4-Import to Blender and create custom boundary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#5-export-from-blender-to-fbx">5-Export from Blender to FBX</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="tuto_D_generate_colliders.html#6-to-8-import-collider-and-define-physics">6 to 8-Import collider and define physics</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_make_release/">Make a release</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">CARLA Ecosystem</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ecosys_ansys/">Ansys Real Time Radar Model</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contributing</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/cont_contribution_guidelines/">Contribution guidelines</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/cont_code_of_conduct/">Code of conduct</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/cont_coding_standard/">Coding standard</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/cont_doc_standard/">Documentation standard</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="https://carla.readthedocs.io/en/0.9.12/">CARLA Simulator</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="https://carla.readthedocs.io/en/0.9.12/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Tutorials (developers) &raquo;</li>
+        
+      
+    
+    <li>Generate detailed colliders</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/carla-simulator/carla/edit/master/Docs/tuto_D_generate_colliders.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="generate-detailed-colliders">Generate detailed colliders</h1>
+<p>This tutorial explains how to create more accurate collision boundaries for vehicles (relative to the original shape of the object). These can be used as physics collider, compatible with collision detection, or as a secondary collider used by raycast-based sensors such a the LIDAR to retrieve more accurate data. New colliders can be integrated into CARLA so that all the community can benefit from these. Find out more about how to contribute to the content repository <a href="https://carla.readthedocs.io/en/0.9.12/cont_contribution_guidelines/">here</a>.  </p>
+<p>There are two approaches to create the new colliders, but they are not completely equivalent.  </p>
+<ul>
+<li><strong>Raycast colliders</strong> — This approach requires some basic 3D modelling skills. A secondary collider is added to the vehicle so that raycast-based sensors such as the LIDAR retrieve more precise data.  </li>
+<li><strong>Physics colliders</strong> — This approach follows the <a href="https://bitbucket.org/yankagan/carla-content/wiki/Home">tutorial</a> created by the contributor <strong><a href="https://github.com/yankagan">Yan Kaganovsky / yankagan</a></strong> to create a mesh with no need of manual modelling. This mesh is then used as main collider for the vehicle, for physics and sensor detection (unless a secondary collider is added).  </li>
+</ul>
+<hr />
+<ul>
+<li><a href="tuto_D_generate_colliders.html#raycast-colliders"><strong>Raycast colliders</strong></a>  <ul>
+<li><a href="tuto_D_generate_colliders.html#1-export-the-vehicle-fbx">1-Export the vehicle FBX</a>  </li>
+<li><a href="tuto_D_generate_colliders.html#2-generate-a-low-density-mesh">2-Generate a low density mesh</a>  </li>
+<li><a href="tuto_D_generate_colliders.html#3-import-the-mesh-into-ue">3-Import the mesh into UE</a>  </li>
+<li><a href="tuto_D_generate_colliders.html#4-add-the-mesh-as-collider">4-Add the mesh as collider</a>  </li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><a href="tuto_D_generate_colliders.html#physics-colliders"><strong>Physics colliders</strong></a>  <ul>
+<li><a href="tuto_D_generate_colliders.html#0-prerequisites">0-Prerequisites</a>  </li>
+<li><a href="tuto_D_generate_colliders.html#1-define-custom-collision-for-wheels-in-unreal-editor">1-Define custom collision for wheels in Unreal Editor</a>  </li>
+<li><a href="tuto_D_generate_colliders.html#2-export-the-vehicle-as-fbx">2-Export the vehicle as FBX</a>  </li>
+<li><a href="tuto_D_generate_colliders.html#3-to-4-import-to-blender-and-create-custom-boundary">3 to 4-Import to Blender and create custom boundary</a>  </li>
+<li><a href="tuto_D_generate_colliders.html#5-export-from-blender-to-fbx">5-Export from Blender to FBX</a>  </li>
+<li><a href="tuto_D_generate_colliders.html#6-to-8-import-collider-and-define-physics">6 to 8-Import collider and define physics</a>  </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="raycast-colliders">Raycast colliders</h2>
+<h3 id="1-export-the-vehicle-fbx">1-Export the vehicle FBX</h3>
+<p>First of all, the original mesh of the vehicle is necessary to be used as reference. For the sake of learning, this tutorial exports the mesh of a CARLA vehicle.<br />
+<strong>1.1</strong> open CARLA in UE and go to <code>Content/Carla/Static/Vehicles/4Wheeled/&lt;model_of_vehicle&gt;</code>.<br />
+<strong>1.2</strong> Press <code>right-click</code> on <code>SM_&lt;model_of_vehicle&gt;</code> to export the vehicle mesh as FBX.  </p>
+<h3 id="2-generate-a-low-density-mesh">2-Generate a low density mesh</h3>
+<p><strong>2.1</strong> Open a 3D modelling software and, using the original mesh as reference, model a low density mesh that stays reliable to the original.  </p>
+<p><img alt="manual_meshgen" src="img/tuto_D_colliders_mesh.jpg" /></p>
+<p><strong>2.2</strong> Save the new mesh as FBX. Name de mesh as <code>sm_sc_&lt;model_of_vehicle&gt;.fbx</code>. E.g. <code>sm_sc_audiTT.fbx</code>.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As for the wheels and additional elements such as roofs, mudguards, etc. the new mesh should follow the geometry quite accurately. Placing simple cubes will not do it.  </p>
+</div>
+<h3 id="3-import-the-mesh-into-ue">3-Import the mesh into UE</h3>
+<p><strong>3.1</strong> Open CARLA in UE and go to <code>Content/Carla/Static/Vehicles/4Wheeled/&lt;model_of_vehicle&gt;</code>.<br />
+<strong>3.2</strong> Press <code>right-click</code> to import the new mesh <code>SM_sc_&lt;model_of_vehicle&gt;.fbx</code>.  </p>
+<h3 id="4-add-the-mesh-as-collider">4-Add the mesh as collider</h3>
+<p><strong>4.1</strong> Go to <code>Content/Carla/Blueprints/Vehicles/&lt;model_of_vehicle&gt;</code> and open the blueprint of the vehicle named as <code>BP_&lt;model_of_vehicle&gt;</code>.  </p>
+<p><strong>4.2</strong> Select the <code>CustomCollision</code> element and add the <code>SM_sc_&lt;model_of_vehicle&gt;.fbx</code> in the <code>Static mesh</code> property.  </p>
+<p><img alt="manual_customcollision" src="img/tuto_D_colliders_final.jpg" /></p>
+<p><strong>4.3</strong> Press <code>Compile</code> in the toolbar above and save the changes.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For vehicles such as motorbikes and bicycles, change the collider mesh of the vehicle itself using the same component, <code>CustomCollision</code>.  </p>
+</div>
+<hr />
+<h2 id="physics-colliders">Physics colliders</h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This tutorial is based on a <a href="https://bitbucket.org/yankagan/carla-content/wiki/Home">contribution</a> made by <strong><a href="https://github.com/yankagan">yankagan</a></strong>! The contributor also wants to aknowledge <strong>Francisco E</strong> for the tutorial on <a href="https://www.youtube.com/watch?v=SEH4f0HrCDM">how to import custom collisions in UE</a>.  </p>
+</div>
+<p><a href="https://www.youtube.com/watch?v=CXK2M2cNQ4Y">This video</a> shows the results achieved after following this tutorial.  </p>
+<h3 id="0-prerequisites">0-Prerequisites</h3>
+<ul>
+<li><strong>Build CARLA from source</strong> on <a href="build_linux.html">Linux</a> or <a href="build_windows.html">Windows</a>.  </li>
+<li><strong>Blender 2.80 or newer</strong> from the <a href="https://www.blender.org/download/">official site</a> for free (open-source 3D modelling software).  </li>
+<li><strong>VHACD Plugin for Blender</strong> following the using the instructions in <a href="https://github.com/andyp123/blender_vhacd">here</a>. This plugin automatically creates an approximation of a selected object using a collection of convex hulls. <a href="https://github.com/kmammou/v-hacd">Read more</a>.  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This <a href="https://www.youtube.com/watch?v=ppASl6yaguU">series</a> and <a href="https://www.udemy.com/course/blender-3d-from-zero-to-hero/?pmtag=MRY1010">Udemy course</a> may be a good introduction to Blender for newcomers. </p>
+</div>
+<h3 id="1-define-custom-collision-for-wheels-in-unreal-editor">1-Define custom collision for wheels in Unreal Editor</h3>
+<p><strong>Step 1.</strong> <em>(in UE)</em> — Add collision boundaries for the wheels. The steps are detailed in the following video.  </p>
+<p><a href="https://www.youtube.com/watch?v=bECnsTw6ehI"><img alt="auto_step01" src="img/tuto_D_colliders_01.jpg" /></a></p>
+<h3 id="2-export-the-vehicle-as-fbx">2-Export the vehicle as FBX</h3>
+<p><strong>Step 2.</strong> <em>(in UE)</em> — Export the skeletal mesh of a vehicle to an FBX file.<br />
+<strong>2.1</strong> Go to <code>Content/Carla/Static/Vehicles/4Wheeled/&lt;model_of_vehicle&gt;</code>.<br />
+<strong>2.2</strong> Press <code>right-click</code> on <code>SM_&lt;model_of_vehicle&gt;</code> to export the vehicle mesh as FBX.  </p>
+<h3 id="3-to-4-import-to-blender-and-create-custom-boundary">3 to 4-Import to Blender and create custom boundary</h3>
+<p><strong>Step 3.</strong> <em>(in Blender)</em> — Import the FBX file into Blender.<br />
+<strong>Step 4.</strong> <em>(in Blender)</em> — Add convex hull meshes to form the new collision boundary (UE requirement for computational efficiency). This is the hardest step. If the entire car is selected, the collision boundary created by VHACD will be imprecise and messy. It will contain sharp edges which will mess-up the drive on the road. It's important that the wheels have smooth boundaries around them. Using convex decomposition on the car's body the mirrors would still not look right. For computer vision, the details of the vehicle are important. For said reason, these step has been divided into two parts. </p>
+<p><strong>4.1</strong> Cut out the bottom parts of the wheels, the side mirrors and the top part of the car's body to create the first boundary using the VHACD tool. Cut out the bottom half of the car to create the second boundary (top part of the car) using the VHACD tool.  </p>
+<p><a href="https://www.youtube.com/watch?v=oROkK3OCuOA"><img alt="auto_step03" src="img/tuto_D_colliders_03.jpg" /></a></p>
+<p><strong>4.2</strong> Create separate boundaries for side mirrors using the VHACD tool.  </p>
+<p><a href="https://www.youtube.com/watch?v=L3upzdC602s"><img alt="auto_step04" src="img/tuto_D_colliders_04.jpg" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be very careful about naming the object. Each boundary should have begin with <code>UCX_</code>, and the rest of the name has to be <strong>exactly</strong> the same as the original mesh.  </p>
+</div>
+<h3 id="5-export-from-blender-to-fbx">5-Export from Blender to FBX</h3>
+<p><strong>Step 5.</strong> <em>(in Blender)</em> — Export the custom collision boundaries into an FBX file.<br />
+<strong>5.1</strong> Select only the original vehicle and all the newly added objects for collision.<br />
+<strong>5.2</strong> In the export menu, check <code>selected objects</code> and select only "Mesh".  </p>
+<p><a href="https://youtu.be/aJPyskYjzWo"><img alt="auto_step05" src="img/tuto_D_colliders_05.jpg" /></a></p>
+<h3 id="6-to-8-import-collider-and-define-physics">6 to 8-Import collider and define physics</h3>
+<p><strong>Step 6.</strong> <em>(in UE)</em> — Import the new FBX into CARLA as an Unreal asset file (static mesh).<br />
+<strong>Step 7.</strong> <em>(in UE)</em> — Import the custom collider into the physics asset for the specific vehicle, so that it is used for computations.<br />
+<strong>Step 8.</strong> <em>(in UE)</em> — Create constraints that connect the different joints and define the physics of all parts.  </p>
+<p><a href="https://www.youtube.com/watch?v=aqFNwAyj2CA"><img alt="auto_step0608" src="img/tuto_D_colliders_0608.jpg" /></a></p>
+<hr />
+<p>That is a wrap on how to change the default colliders for vehicles in CARLA.  </p>
+<p>Open CARLA and mess around for a while. If there are any doubts, feel free to post these in the forum. </p>
+<div class="build-buttons">
+<p>
+<a href="https://github.com/carla-simulator/carla/discussions/" target="_blank" class="btn btn-neutral" title="Go to the CARLA forum">
+CARLA forum</a>
+</p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://carla.readthedocs.io/en/0.9.12/tuto_D_make_release/" class="btn btn-neutral float-right" title="Make a release">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="https://carla.readthedocs.io/en/0.9.12/tuto_D_customize_vehicle_suspension/" class="btn btn-neutral" title="Customize vehicle suspension"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  
+    <script>var base_url = '..';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="extra.js" defer></script>
+      <script src="readthedocs-data.js" defer></script>
+      
+      
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

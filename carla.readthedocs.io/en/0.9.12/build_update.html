@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Update CARLA - CARLA Simulator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="extra.css" rel="stylesheet" />
+  
+  
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Update CARLA";
+    var mkdocs_page_input_path = "build_update.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+<script async type="text/javascript" src="../../_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="carla" /><meta name="readthedocs-version-slug" content="0.9.12" /><meta name="readthedocs-resolver-filename" content="/build_update/" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="https://carla.readthedocs.io/en/0.9.12/" class="icon icon-home"> CARLA Simulator</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="https://carla.readthedocs.io/en/0.9.12/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/start_introduction/">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/start_quickstart/">Quick start package installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Building CARLA</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="build_linux.html">Linux build</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="build_windows.html">Windows build</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="build_update.html">Update CARLA</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="build_update.html#update-commands-summary">Update commands summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="build_update.html#get-latest-binary-release">Get latest binary release</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="build_update.html#update-linux-and-windows-build">Update Linux and Windows build</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="build_update.html#clean-the-build">Clean the build</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="build_update.html#pull-from-origin">Pull from origin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="build_update.html#download-the-assets">Download the assets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="build_update.html#launch-the-server">Launch the server</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="build_update.html#get-development-assets">Get development assets</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/build_system/">Build system</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/build_docker/">CARLA in Docker</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/build_faq/">F.A.Q.</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">First steps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="core_concepts.html">Core concepts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="core_world.html">1st- World and client</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="core_actors.html">2nd- Actors and blueprints</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="core_map.html">3rd- Maps and navigation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="core_sensors.html">4th- Sensors and data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Advanced concepts</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_opendrive/">OpenDRIVE standalone mode</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_ptv/">PTV-Vissim co-simulation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_recorder/">Recorder</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_rendering_options/">Rendering options</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="adv_rss.html">RSS</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="adv_synchrony_timestep.html">Synchrony and time-step</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_benchmarking/">Benchmarking Performance</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_agents/">CARLA Agents</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Traffic Simulation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ts_traffic_simulation_overview/">Traffic Simulation Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_traffic_manager/">Traffic Manager</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/adv_sumo/">SUMO co-simulation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_scenic/">Scenic</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">References</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="python_api.html">Python API reference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/bp_library/">Blueprint Library</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ref_cpp/">C++ reference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ref_recorder_binary_file_format/">Recorder binary file format</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ref_sensors.html">Sensors reference</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Plugins</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/plugins_carlaviz/">carlaviz — web visualizer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">ROS bridge</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ros_documentation/">ROS bridge documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Custom Maps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_map_overview/">Overview of custom maps in CARLA</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_generate_map/">Create a map in RoadRunner</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_add_map_package/">Import map in CARLA package</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_add_map_source/">Import map in CARLA source build</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_add_map_alternative/">Alternative ways to import maps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_manual_map_package/">Manually prepare map package</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_layers/">Customizing maps: Layered maps</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_add_tl/">Customizing maps: Traffic lights and signs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_road_painter/">Customizing maps: Road painter</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_buildings/">Customizing maps: Procedural Buildings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_custom_weather_landscape/">Customizing maps: Weather and landscape</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_M_generate_pedestrian_navigation/">Generate pedestrian navigation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Large Maps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/large_map_overview/">Large maps overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/large_map_roadrunner/">Create a large map in RoadRunner</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/large_map_import/">Import/Package a large map</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials (general)</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto_G_add_friction_triggers.html">Add friction triggers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto_G_control_vehicle_physics.html">Control vehicle physics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_control_walker_skeletons/">Control walker skeletons</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_openstreetmap/">Generate maps with OpenStreetMap</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_retrieve_data/">Retrieve simulation data</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_carsim_integration/">CarSim Integration (Beta)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_rllib_integration/">RLlib Integration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_G_chrono/">Chrono Integration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/build_docker_unreal/">Build Unreal and CARLA in Docker</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials (assets)</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_A_add_vehicle/">Add a new vehicle</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto_A_add_props.html">Add new props</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_A_create_standalone/">Create standalone packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_A_material_customization/">Material customization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials (developers)</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_contribute_assets/">How to upgrade content</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_create_sensor/">Create a sensor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_create_semantic_tags/">Create semantic tags</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_customize_vehicle_suspension/">Customize vehicle suspension</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto_D_generate_colliders.html">Generate detailed colliders</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/tuto_D_make_release/">Make a release</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">CARLA Ecosystem</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/ecosys_ansys/">Ansys Real Time Radar Model</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contributing</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/cont_contribution_guidelines/">Contribution guidelines</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/cont_code_of_conduct/">Code of conduct</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/cont_coding_standard/">Coding standard</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="https://carla.readthedocs.io/en/0.9.12/cont_doc_standard/">Documentation standard</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="https://carla.readthedocs.io/en/0.9.12/">CARLA Simulator</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="https://carla.readthedocs.io/en/0.9.12/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Building CARLA &raquo;</li>
+        
+      
+    
+    <li>Update CARLA</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/carla-simulator/carla/edit/master/Docs/build_update.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="update-carla">Update CARLA</h1>
+<ul>
+<li><a href="build_update.html#update-commands-summary"><strong>Update commands summary</strong></a>  </li>
+<li><a href="build_update.html#get-latest-binary-release"><strong>Get the lastest binary release</strong></a>  </li>
+<li><a href="build_update.html#update-linux-and-windows-build"><strong>Update Linux and Windows build</strong></a>  <ul>
+<li><a href="build_update.html#clean-the-build">Clean the build</a>  </li>
+<li><a href="build_update.html#pull-from-origin">Pull from origin</a>  </li>
+<li><a href="build_update.html#download-the-assets">Download the assets</a>  </li>
+<li><a href="build_update.html#launch-the-server">Launch the server</a>  </li>
+</ul>
+</li>
+<li><a href="build_update.html#get-development-assets"><strong>Get development assets</strong></a>  </li>
+</ul>
+<p>To post unexpected issues, doubts or suggestions, feel free to login in the CARLA forum.</p>
+<div class="build-buttons">
+<p>
+<a href="https://github.com/carla-simulator/carla/discussions/" target="_blank" class="btn btn-neutral" title="Go to the latest CARLA release">
+CARLA forum</a>
+</p>
+</div>
+
+<hr />
+<h2 id="update-commands-summary">Update commands summary</h2>
+<details>
+<summary> Show command lines to update CARLA</summary>
+
+
+<pre><code class="language-sh"># Update a CARLA packaged release. 
+#   1. Delete the current one. 
+#   2. Follow the Quick start installation to get the one desired. 
+
+
+# Update Linux build. 
+git checkout master
+make clean
+git pull origin master
+./Update.sh
+
+
+# Update Windows build. 
+git checkout master
+make clean
+git pull origin master
+#   Erase the content in `Unreal\CarlaUE4\Content\Carla`.
+#   Go to `\Util\ContentVersions.txt`.
+#   Download the latest content.
+#   Extract the new content in `Unreal\CarlaUE4\Content\Carla`. 
+
+
+# Get development assets. 
+#   Delete the `/Carla` folder containing previous assets. 
+#   Go to the main carla folder.
+git clone https://bitbucket.org/carla-simulator/carla-content Unreal/CarlaUE4/Content/Carla
+
+</code></pre>
+
+</details>
+
+<hr />
+<h2 id="get-latest-binary-release">Get latest binary release</h2>
+<p>Binary releases are prepackaged and thus, tied to a specific version of CARLA. To get the latest, erase the previous and follow the <a href="https://carla.readthedocs.io/en/0.9.12/start_quickstart/">quick start installation</a> to get the one desired.  </p>
+<p>Releases are listed in <strong>Development</strong> in the CARLA repository. There is also a highly experimental <strong>Nightly build</strong> containing the current state of CARLA up to date. </p>
+<div class="build-buttons">
+<p>
+<a href="https://github.com/carla-simulator/carla/blob/master/Docs/download.md" target="_blank" class="btn btn-neutral" title="Go to the list of CARLA releases">
+<span class="icon icon-github"></span> Get releases</a>
+</p>
+
+<p>
+<a href="http://carla-releases.s3.amazonaws.com/Linux/Dev/CARLA_Latest.tar.gz" target="_blank" class="btn btn-neutral" title="Go to the nightly CARLA build">
+<span class="icon fa-cloud-download"></span> Get the nightly build</a>
+</p>
+</div>
+
+<hr />
+<h2 id="update-linux-and-windows-build">Update Linux and Windows build</h2>
+<p>Make sure to be in the local <code>master</code> branch before the update. Then, merge or rebase the changes to other branches and solve possible conflicts. </p>
+<pre><code class="language-sh">git checkout master
+</code></pre>
+<h3 id="clean-the-build">Clean the build</h3>
+<p>Go to the main CARLA folder and delete binaries and temporals generated by the previous build.</p>
+<pre><code class="language-sh">make clean
+</code></pre>
+<h3 id="pull-from-origin">Pull from origin</h3>
+<p>Get the current version from <code>master</code> in the CARLA repository. </p>
+<pre><code class="language-sh">git pull origin master
+</code></pre>
+<h3 id="download-the-assets">Download the assets</h3>
+<p><strong>Linux.</strong></p>
+<pre><code class="language-sh">./Update.sh
+</code></pre>
+<p><strong>Windows.</strong>  </p>
+<p><strong>1.</strong> Erase the previous content in <code>Unreal\CarlaUE4\Content\Carla</code>.<br />
+<strong>2.</strong> Go to <code>\Util\ContentVersions.txt</code>.<br />
+<strong>3.</strong> Download the content for <code>latest</code>.<br />
+<strong>4.</strong> Extract the new content in <code>Unreal\CarlaUE4\Content\Carla</code>.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to work with that the CARLA team is devleoping, go to <strong>get development assets</strong> below. </p>
+</div>
+<h3 id="launch-the-server">Launch the server</h3>
+<p>Run the server in spectator view to make sure that everything worked properly. </p>
+<pre><code class="language-sh">make launch
+</code></pre>
+<hr />
+<h2 id="get-development-assets">Get development assets</h2>
+<p>The CARLA team works with assets still in development. These models and maps have a <a href="https://bitbucket.org/carla-simulator/carla-content">public git repository</a> where the CARLA team regularly pushes latest updates. Assets are still unfinished, using them is only recommended for developers.  </p>
+<p>In order to handle this repository it is advisted to install <a href="https://github.com/git-lfs/git-lfs/wiki/Installation">git-lfs</a>. The repository is modified regularly, and git-lfs works faster with large binary files.  </p>
+<p>To clone the repository, <strong>go to the main CARLA directory</strong> and run the following command.  </p>
+<pre><code class="language-sh">git clone https://bitbucket.org/carla-simulator/carla-content Unreal/CarlaUE4/Content/Carla
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Delete the <code>/Carla</code> folder containing the assets before cloning the repository. Otherwise, an error will show. </p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://carla.readthedocs.io/en/0.9.12/build_system/" class="btn btn-neutral float-right" title="Build system">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="build_windows.html" class="btn btn-neutral" title="Windows build"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  
+    <script>var base_url = '..';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="extra.js" defer></script>
+      <script src="readthedocs-data.js" defer></script>
+      
+      
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
